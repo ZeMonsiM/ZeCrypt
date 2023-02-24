@@ -1,0 +1,49 @@
+<MyRoot>:
+
+    status: status
+    use_key: use_key
+    start_encryption: start_encryption
+    start_decryption: start_decryption
+    input_file: input_file
+    encryption_key: encryption_key
+
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: "ZeCrypt"
+            font_size: 48
+        TextInput:
+            size_hint: (1, None)
+            height: 60
+            id: input_file
+            hint_text: "Fichier en entrée"
+            multiline: False
+        TextInput:
+            size_hint: (1, None)
+            height: 60
+            id: encryption_key
+            hint_text: "Clé de chiffrement / Emplacement du fichier clé"
+            multiline: False
+        BoxLayout:
+            orientation: 'horizontal'
+            Label:
+                text: "Utiliser un fichier clé"
+                font_size: 16
+            CheckBox:
+                id: use_key
+        BoxLayout:
+            orientation: 'horizontal'
+            Button:
+                id: start_encryption
+                text: "Chiffrer"
+                on_press: root.call_encryption()
+                disabled: False
+            Button:
+                id: start_decryption
+                text: "Déchiffrer"
+                on_press: root.call_decryption()
+                disabled: False
+        Label:
+            id: status
+            text: "PRET !"
+            color: 0, 1, 0, 1
