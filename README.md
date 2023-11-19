@@ -66,5 +66,6 @@
 ---
 
 ## Tests de vitesse
- Des tests de vitesse seront bientôt réalisés pour donner un ordre d'idée de la différence de vitesse entre les versions de ZeCrypt.
- Le test sera réalisé sur un environnement Linux, avec un processeur Intel Core i9-13900H et 16Go de RAM. Les programmes testés sont : `zecrypt_mass.py`, `zecrypt_xor_mass.py` et `zecrypt_xor.py` (sans utiliser le multiprocessing).
+ Ces tests ont été réalisés sur un environnement Linux (PopOS 22.04), avec un processeur Intel Core i9-13900H et 16Go de RAM. Les programmes testés sont : `zecrypt_mass.py`, `zecrypt_xor_mass.py` et `zecrypt_xor.py` (sans utiliser le multiprocessing).
+ La taille totale du dataset, composé d'images, est de 500Mo.
+ ![Graphique comparatif des vitesses de traitement des fichiers](https://github.com/ZeMonsiM/ZeCrypt/blob/main/docs/speed_comparison.png)
