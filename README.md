@@ -54,5 +54,17 @@
 
 ---
 
+## ZeCrypt XOR
+ La version XOR du programme ZeCrypt a été ajouté pour avoir un chiffrement plus rapide des fichiers. Cette version utilise un fichier clé pour sécuriser les fichiers, que l'utilisateur peut générer avec le script `keygen.py`.
+ Bien que la clé utilisée peut être identique entre les différentes versions de ZeCrypt, cet algorithme ne donne pas le même fichier en sortie ! **Les fichiers chiffrés avec la version XOR ne peuvent pas être déchiffrés avec la version classique !**
+
+---
+
 ## Générer un fichier clé aléatoire
  Le script `keygen.py` permet à l'utilisateur de générer, via le terminal, une clé de chiffrement aléatoire de longueur donnée. Il est très simple d'utilisation et demande les informations pendant l'exécution afin de sauvegarder la clé dans un fichier `.key`.
+
+---
+
+## Tests de vitesse
+ Des tests de vitesse seront bientôt réalisés pour donner un ordre d'idée de la différence de vitesse entre les versions de ZeCrypt.
+ Le test sera réalisé sur un environnement Linux, avec un processeur Intel Core i9-13900H et 16Go de RAM. Les programmes testés sont : `zecrypt_mass.py`, `zecrypt_xor_mass.py` et `zecrypt_xor.py` (sans utiliser le multiprocessing).
